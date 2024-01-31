@@ -1,0 +1,36 @@
+.our_partners_card__ {
+  border: 1px solid $borderBreakColor;
+  border-radius: $mainBorderRadius;
+  padding: 20px 10px;
+  background-color: #fff;
+  transition: 0.5s;
+
+  .icon__ {
+    max-width: 141px;
+    max-height: 125px;
+    margin: 0 auto;
+  }
+  
+  .title__ {
+    font-size: 18px;
+    font-weight: 700;
+    color: $headingMainColor;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .parag__ {
+    font-size: 14px;
+    font-weight: 300;
+    color: $paragraphMainColor;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 0 0 50px rgba($primaryColor, 0.3);
+    
+  }
+}

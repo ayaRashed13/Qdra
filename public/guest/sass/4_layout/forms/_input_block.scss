@@ -1,0 +1,51 @@
+.input__ {
+  height: 52px;
+  border-radius: $secondaryBorderRadius;
+  border: solid 1px $inputBorderColor;
+  padding: 24px 33px;
+  margin-bottom: 0;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: $headingMainColor;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  &:focus,
+  &:hover {
+    border-color: $primaryColor;
+  }
+
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: $placeholderColor;
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  &.none_border__ {
+    border: none !important;
+  }
+
+  &.none_padding__ {
+    padding: 0 !important;
+  }
+
+  &.fixed_width__ {
+    min-width: 352px;
+
+    @include xs {
+      min-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.customer_opinions_card__ {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: $mainBorderRadius;
+  box-shadow: $mainShadowColor;
+  background-color: #fff;
+  
+  .figure__ {
+    min-width: 132px;
+    padding-bottom: 96.212%;
+    border-radius: $thirdBorderRadius;
+    overflow: hidden;
+  }
+  
+  .head_wrapper__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    transition: 0.5s;
+  }
+
+  .title__ {
+    font-size: 18px;
+    font-weight: 600;
+    color: $headingMainColor;
+    margin: 0;
+    transition: 0.5s;
+  }
+
+  .rating_wrapper__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .fa-star {
+    font-size: 14px;
+    color: $paragraphFourthColor;
+
+    &.active {
+      color: #DBA700;
+    }
+  }
+  
+  .parag__ {
+    font-size: 14px;
+    font-weight: 400;
+    color: $paragraphMainColor;
+    margin-bottom: 6px;
+  }
+
+  .loaction__ {
+    font-size: 18px;
+    font-weight: 500;
+    color: $headingFourthColor;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &:hover {
+    .title__ {
+      color: $primaryColor;
+    }
+
+    .img-om {
+      transform: scale(1.15);
+    }
+  }
+}

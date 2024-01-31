@@ -1,0 +1,18 @@
+  .about_us_main_parag__ {
+    font-size: 22px;
+    font-weight: 600;
+    color: $headingMainColor;
+    margin-bottom: 15px;
+    max-width: 420px;
+    line-height: 1.7;
+    
+    .site_name__ {
+      font-size: 26px;
+      font-weight: 700;
+      color: $primaryColor;
+    }
+
+    &.full_width__ {
+      max-width: 100%;
+    }
+  }

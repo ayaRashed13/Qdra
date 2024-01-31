@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.927" height="34.925" viewBox="0 0 34.927 34.925">
+  <g id="send" transform="translate(0 10.432)">
+    <rect id="Rectangle_100" data-name="Rectangle 100" width="30.03" height="30.03" transform="translate(0 -5.537)" fill="none"/>
+    <path id="Path_81" data-name="Path 81" d="M0,19.707V0L9.384,24.4Z" transform="translate(26.964 -2.469) rotate(45)" fill="rgba(255,255,255,0.66)" fill-rule="evenodd"/>
+    <path id="Path_82" data-name="Path 82" d="M2.683,23.416l7.22-3.61a.938.938,0,1,1,.839,1.679L1.358,26.177A.939.939,0,0,1,.063,25L9.447.6A.939.939,0,0,1,11.2.6L20.583,25a.939.939,0,0,1-1.3,1.176L13.339,23.2a.939.939,0,1,1,.839-1.679l3.784,1.892L10.323,3.552Z" transform="translate(20.328 -10.432) rotate(45)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_83" data-name="Path 83" d="M0,.938V7.574a.938.938,0,0,0,1.877,0V.938A.938.938,0,0,0,0,.938Z" transform="translate(17.829 5.338) rotate(45)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

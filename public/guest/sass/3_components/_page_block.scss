@@ -1,0 +1,14 @@
+.page_block__ {
+  margin-top: 100px;
+
+  .parag__ {
+    font-size: 18px;
+    font-weight: 400;
+    color: $paragraphMainColor;
+    margin-bottom: 10px !important;
+  }
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}

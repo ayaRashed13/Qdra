@@ -1,0 +1,37 @@
+.about_us_page {
+  .goals_cards_wrapper__ {
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    @include xs {
+      margin-top: 50px !important;
+      gap: 10px;
+    }
+
+    .goals_card__ {
+      width: 25%;
+      max-width: 25%;
+      
+      @include sm {
+        width: 50%;
+        max-width: 50%;
+      }
+
+      @include xs{
+        width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+      }
+
+      @include xxs {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

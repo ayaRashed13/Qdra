@@ -1,0 +1,191 @@
+.link__ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 26px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.main_link {
+    background-color: $primaryColor;
+    color: $headingMainColor;
+    height: 52px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 20px;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.85);
+    }
+  }
+
+  &.full_width__ {
+    min-width: 100%;
+  }
+
+  &.full_width_sm__ {
+    @include sm {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.margin_inline_start_auto__ {
+    margin-inline-start: auto;
+  }
+
+  &.center__ {
+    margin: 0 auto;
+  }
+
+  &.with_icon__ {
+    &::after {
+      content: url(../images/shapes//arrow_circle_left.svg);
+      display: block;
+    }
+  }
+
+  &.header_content_link__ {
+    font-size: 14px;
+    font-weight: 400;
+    color: $headingMainColor;
+
+    @include sm {
+      font-size: 12px;
+      justify-content: flex-start;
+      gap: 5px;
+    }
+
+    @include xs {
+      font-size: 10px;
+      justify-content: flex-start;
+      gap: 5px;
+    }
+
+    .icon__ {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: rgba($primaryColor, 0.13);
+      padding: 7px;
+      flex-shrink: 0;
+    }
+
+    &.number_link__ {
+      direction: ltr;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.header_booking_link__ {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: $primaryColor;
+    height: 53px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 40px;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+  }
+
+  &.about_us_section_link__ {
+    background-color: $primaryColor;
+    width: fit-content;
+    gap: 9px;
+    padding: 25px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    height: 65px;
+    border-radius: $secondaryBorderRadius;
+    border: 1px solid $primaryColor;
+
+    @include dir {
+      .icon__ {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      background-color: $primaryColorHover;
+    }
+  }
+
+  &.services_link__ {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+
+    .icon__ {
+      @include dir {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      gap: 20px;
+    }
+  }
+
+  &.health_care_card_link__ {
+    background-color: $primaryColor;
+    width: fit-content;
+    height: 40px;
+    color: #fff;
+    padding: 10px 42px;
+
+    &:hover {
+      background-color: $primaryColorHover;
+    }
+  }
+
+  &.contact_us_link__ {
+    justify-content: flex-start;
+    margin-bottom: 35px;
+    gap: 30px;
+
+    .icon__ {
+      width: 71px;
+      height: 71px;
+      border-radius: 5px;
+      background-color: rgba($primaryColor, 0.40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .img-om {
+        max-height: 32px;
+        max-width: 45px;
+      }
+    }
+
+    .title__ {
+      font-size: 16px;
+      font-weight: 400;
+      color: $paragraphMainColor;
+      margin-bottom: 10px;
+    }
+
+    .info__ {
+      color: $headingMainColor;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.category_details_section_title__ {
+  font-size: 18px;
+  font-weight: 600;
+  color: $headingMainColor;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: url(../images/shapes/category_details_section_title_shape.svg);
+    margin-inline-end: 10px;
+  }
+}
+
+.category_details_section__ {
+
+  .parag__ {
+    font-size: 18px;
+    font-weight: 400;
+    color: $paragraphMainColor;
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,390 @@
+.section_head_wrapper__ {
+  margin-bottom: 55px;
+
+  @include xs {
+    margin-bottom: 35px;
+  }
+
+  .section_header {
+    margin: 0;
+  }
+
+  &.with_tabs_wrapper__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include xs {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    .page_title__ {
+      @include xs {
+        font-size: 25px;
+      }
+    }
+  }
+
+  &.with_icon__ {
+    display: flex;
+    align-items: center;
+
+    .icon__ {
+      margin: 0;
+      max-width: 110px;
+      max-height: 91px;
+      margin-inline-end: 30px;
+
+      &.civil_tech_page_icon__ {
+        max-width: 124px;
+        max-height: 124px;
+        border-radius: 50%;
+        background-color: rgba($blueColor, 0.1);
+        padding: 25px;
+
+        @include xs {
+          max-width: 74px;
+          max-height: 74px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  &.center {
+    justify-content: center;
+    
+    .section_main_title__,
+    .section_main_sub_title___  {
+      margin: 0 auto;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &.none_margin__ {
+    margin: 0 !important;
+  }
+
+  &.white_color {
+    .section_main_title__,
+    .section_main_sub_title___ {
+      color: #fff;
+
+      &::after,
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.section_header {
+  margin-bottom: 44px;
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+
+  @include xs {
+    margin-bottom: 15px;
+
+    .site_head__,
+    .site_head_sub_title__ {
+      text-align: center;
+    }
+  }
+
+  &.center__ {
+    .section_main_title__,
+    .section_main_sub_title___ {
+      text-align: center;
+    }
+
+    .site_head__ {
+      margin-bottom: 12px;
+    }
+  }
+
+  &.center_xs__ {
+    @include xs {
+      .section_main_title__,
+      .section_main_sub_title___ {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.section_main_title__ {
+  font-size: 30px;
+  font-weight: 700;
+  color: $headingMainColor;
+  margin-bottom: 14px;
+  width: fit-content;
+  position: relative;
+
+  @include sm {
+    font-size: 22px;
+  }
+
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $primaryColor;
+    top: calc(100% + 15px);
+    border-radius: 5px;
+    height: 7px;
+    transition: 0.5s;
+  }
+
+  &::before {
+    inset-inline-start: 0;
+    width: 70%;
+  }
+
+  &::after {
+    inset-inline-start: calc(70% + 5px);
+    width: 17px;
+  }
+
+  &.with_margin_bottom__ {
+    margin-bottom: 30px !important;
+  }
+}
+
+.section_main_sub_title___ {
+  font-size: 20px;
+  font-weight: 400;
+  color: $paragraphMainColor;
+  margin: 0;
+
+  @include sm {
+    font-size: 16px;
+  }
+}
+
+.main_section_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: $headingMainColor;
+  text-transform: capitalize;
+  padding: 15px 26px;
+  background-color: $mainSectionTitleBackground;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    width: 8px;
+    height: 100%;
+    background-color: rgba($secondaryColor, 0.13);
+  }
+}
+
+.link_arrow_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @include xs {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+// ######################## Page Title ########################
+.page_head_wrapper {
+  height: calc(100vh - 60px);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+  border-radius: 0 0 $fifthBorderRadius $fifthBorderRadius;
+  overflow: hidden;
+  @include sm {
+    margin-bottom: 30px;
+  }
+
+  @include xs {
+    margin-bottom: 15px;
+  }
+
+  .figure__ {
+    position: absolute;
+    padding-bottom: 37.5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .title_wrapper__ {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(#000, 0.5);
+  }
+
+  &.center__ {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    .page_main_title__,
+    .page_sub_title__ {
+      text-align: center;
+    }
+  }
+
+  &.flex_display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.with_gap__ {
+    gap: 35px;
+  }
+
+  &.with_icon__ {
+    justify-content: unset;
+    // gap: 10px;
+
+    .icon__ {
+      margin: 0;
+      max-width: 72px;
+      max-height: 72px;
+      margin-inline-end: 20px;
+    }
+  }
+
+  &.small_size_dir_column {
+    @include sm {
+      gap: 20px;
+      flex-direction: column !important;
+    }
+  }
+
+  &.small_size_center__ {
+    @include sm {
+      .page_main_title__,
+      .page_sub_title__ {
+        text-align: center;
+      }
+    }
+  }
+
+  &.none_margin__ {
+    margin: 0 !important;
+  }
+}
+
+.title_icon_wrapper__ {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page_main_title__ {
+  font-size: 30px;
+  font-weight: 700;
+  width: fit-content;
+  color: #fff;
+  margin-bottom: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+
+  @include xs {
+    font-size: 16px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: calc(100% + 15px);
+    border-radius: 5px;
+    height: 7px;
+    transition: 0.5s;
+  }
+
+  &::before {
+    inset-inline-start: 0;
+    width: 60%;
+  }
+
+  &::after {
+    inset-inline-start: calc(60% + 5px);
+    width: 17px;
+  }
+
+}
+
+.page_sub_title__ {
+  font-size: 17px;
+  font-weight: 400;
+  color: $paragraphMainColor;
+  margin: 0;
+}
+// ######################## page block title ########################
+.page_block_title__ {
+  font-size: 22px;
+  font-weight: 700;
+  color: $headingMainColor;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-transform: capitalize;
+  background-color: rgba($primaryColor, 0.20);
+  height: 136px;
+  display: flex;
+  align-items: center;
+  padding-inline-start: 50px;
+  position: relative;
+  border-radius: $fourthBorderRadius 0 0 $fourthBorderRadius;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline-start: -20px;
+    width: 40px;
+    height: 100%;
+    border-radius: $fourthBorderRadius 0 0 $fourthBorderRadius;
+    background-color: $primaryColor;
+  }
+
+  &.none_margin_bottom__ {
+    margin-bottom: 0;
+  }
+}
+
+.block_title__ {
+  font-size: 22px;
+  font-weight: 700;
+  color: $headingMainColor;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-transform: capitalize;
+}

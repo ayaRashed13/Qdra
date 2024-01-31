@@ -1,0 +1,33 @@
+.upload_file_label__ {
+  position: relative;
+  cursor: pointer;
+
+  .upload_input__ {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .label_placeholder__ {
+    font-size: 14px;
+    font-weight: 300;
+    color: $placeholderColor;
+    transition: 0.5s;
+
+    &.uploaded {
+      color: $headingMainColor !important;
+      font-weight: 400;
+    }
+  }
+
+  .icon__ {
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 25px;
+    transform: translateY(-50%);
+  }
+}

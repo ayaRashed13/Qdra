@@ -1,0 +1,164 @@
+.goals_card__ {
+  position: relative;
+
+  .img_wrapper__ {
+    padding: 60px;
+    background-color: #fff;
+    border: 22px solid #f3f3f3;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 270px;
+    max-height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include md {
+      padding: 30px;
+    }
+
+    @include sm {
+      max-width: 100%;
+      max-height: unset;
+    }
+
+    @include xs {
+      padding: 45px;
+    }
+
+
+  }
+
+  .number__ {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 50px;
+    background-color: $primaryColor;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+
+    @include md {
+      inset-inline-end: 25px;
+    }
+
+    &::after {
+      position: absolute;
+      content: url(../images/shapes/gools_block_number_one_shape.svg);
+      transform: rotate(-110deg);
+      top: -15px;
+      inset-inline-start: -13px;
+    }
+  }
+
+  .title__ {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    text-align: center;
+  }
+
+  .parag__ {
+    font-size: 16px;
+    font-weight: 400;
+    color: $paragraphMainColor;
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @include xs {
+    margin: 0 !important;
+    &::before {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: url(../images/shapes/goals_blocks_line_bettwen.svg);
+    position: absolute;
+  }
+
+
+  &:nth-of-type(2),
+  &:nth-of-type(4) {
+    margin-top: 265px;
+  }
+
+  &:nth-of-type(1) {
+    &::before {
+      top: 61px;
+      inset-inline-start: 91%;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .number__ {
+      &:after {
+        content: url(../images/shapes/gools_block_number_two_shape.svg);
+      }
+    }
+
+    &::before {
+      transform: scaleY(-1);
+      top: 100px;
+      inset-inline-start: 91%;
+
+      @include md {
+        top: 90px;
+      }
+
+      @include sm {
+        top: unset;
+        inset-inline-start: -103px;
+        bottom: 107px;
+        transform: rotate(60deg);
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    @include sm {
+      margin-top: -280px;
+    }
+    .number__ {
+      &:after {
+        content: url(../images/shapes/gools_block_number_three_shape.svg);
+      }
+    }
+
+    &::before {
+      top: 61px;
+      inset-inline-start: 91%;
+
+      @include sm {
+        top: 113px;
+      }
+    }
+  }
+
+  &:nth-of-type(4) {
+    @include sm {
+      margin-top: 50px;
+    }
+
+    .number__ {
+      &:after {
+        content: url(../images/shapes/gools_block_number_four_shape.svg);
+      }
+    }
+
+    &::before {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.health_care_services_card__ {
+  .figure__ {
+    padding-bottom: 104.444%;
+    border-radius: $secondaryBorderRadius;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  .head_wrapper__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .title__ {
+    font-size: 20px;
+    font-weight: 700;
+    color: $headingMainColor;
+    margin: 0;
+  }
+  
+  .time__ {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    color: $headingMainColor;
+
+    &::before {
+      content: url(../images/shapes/clock_icon__.svg);
+      height: 23px;
+      
+    }
+  }
+
+  .parag__ {
+    font-size: 16px;
+    font-weight: 400;
+    color: $paragraphMainColor;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    .img-om {
+      transform: scale(1.1);
+    }
+  }
+}
