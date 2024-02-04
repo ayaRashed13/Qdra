@@ -2,9 +2,10 @@
 
 namespace App\repositories;
 
+use App\Models\Service;
+use Illuminate\Http\Request;
 use App\Models\ServiceCategory;
 use App\Http\Requests\ServiceCategoryRequest;
-use App\Models\Service;
 
 class ServiceCategoryRepository
 {
@@ -21,9 +22,14 @@ class ServiceCategoryRepository
         return $services;
     }
 
-    public function store(ServiceCategoryRequest $service_categoryRequest)
+    public function store(Request $request)
     {
-        $data_category = $service_categoryRequest->validated();
+        $data_category = $request->validate(
+            [
+            "title" => "required|string|max:255",
+            "desc" => "required|string",
+            "service_id"=>"required|exists:services,id"
+        ]);
         ServiceCategory::create($data_category);
     }
 
@@ -34,9 +40,14 @@ class ServiceCategoryRepository
         return [$serviceCategory, $services];
     }
 
-    public function update(ServiceCategoryRequest $service_categoryRequest, $id)
+    public function update(Request $request, $id)
     {
-        $data_category = $service_categoryRequest->validated();
+        $data_category = $request->validate(
+        [
+            "title" => "required|string|max:255",
+            "desc" => "required|string",
+            "service_id"=>"required|exists:services,id"
+        ]);
         //storage
         //dd($data_category);
         //update

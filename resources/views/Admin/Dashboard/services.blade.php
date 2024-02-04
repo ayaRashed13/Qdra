@@ -75,7 +75,7 @@
     <div class="card-footer clearfix">
 
       <a href="{{ url('services/create') }}" class="btn btn-sm btn-info float-left">Create New Service</a>
-      <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Contacts</a>
+
     </div>
     <!-- /.card-footer -->
   </div>

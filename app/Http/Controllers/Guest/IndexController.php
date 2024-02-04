@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 use App\Models\ServiceSection;
 use App\Models\ServiceCategory;
 use App\Http\Controllers\Controller;
+use App\Models\Setting;
+use App\Models\Social;
 
-class ServiceIndexController extends Controller
+class IndexController extends Controller
 {
     public function all(){
+        $socials = Social::all();
+        $settings = Setting::all();
         $services = Service::all();
         $teams = Team::all();
-        return  view("Guest.index",compact("services","teams"));
+        return  view("Guest.index",compact("services","teams","socials","settings"));
     }
 
 
@@ -26,6 +30,6 @@ class ServiceIndexController extends Controller
     }
 
 
-  
+
 
 }

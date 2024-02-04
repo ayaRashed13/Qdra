@@ -14,8 +14,11 @@
           <div class="col-sm-6">
             <!-- text input -->
             <div class="form-group">
-              <label>Name</label>
+              <label class="required">Name</label>
               <input type="text"name="name" class="form-control" placeholder="Enter ..." value="{{ $key1->name }}">
+              @error('name')
+              <span class="text-danger">{{ $message }}</span>
+          @enderror
             </div>
           </div>
         </div>
@@ -23,7 +26,7 @@
         <div class="row">
             <div class="col-sm-6">
         <div class="form-group">
-            <label for="exampleInputEmail1">Country Name</label>
+            <label for="exampleInputEmail1" class="required">Country Name</label>
     <select name="country_id" id="">
         @foreach ($key2 as $country )
         {{--@dd($countries)--}}
@@ -31,6 +34,9 @@
         @endforeach
 
         </select>
+        @error('country_id')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
         </div>
     </div>
 
@@ -39,7 +45,7 @@
 
 </div>
 
-        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </form>
     </div>
     <!-- /.card-body -->

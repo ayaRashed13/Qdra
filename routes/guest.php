@@ -4,6 +4,8 @@ use App\Models\RequestJob;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Guest\TeamController;
+use App\Http\Controllers\Guest\IndexController;
+use App\Http\Controllers\Guest\SocialController;
 use App\Http\Controllers\Guest\ContactController;
 use App\Http\Controllers\Guest\ServiceController;
 use App\Http\Controllers\Guest\RequestJobController;
@@ -22,13 +24,14 @@ Route::controller(ServiceController::class)->group(function(){
     });
 
 
-    Route::controller(ServiceIndexController::class)->group(function(){
+    Route::controller(IndexController::class)->group(function(){
         Route::middleware("guest")->group(function(){
             Route::get("/","all");
             Route::get("guest/indexshow/{id}","show");
             });
 
         });
+
 
 
 

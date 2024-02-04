@@ -13,12 +13,22 @@ class SettingSeeder extends Seeder
      */
     public function run(): void
     {
+
+        //DB::table('settings')->insert([
+        //    'key' => 'background_image_home',
+        //    'value' => '',
+        //]);
         DB::table('settings')->insert([
-            'key' => 'title',
-            'value' => 'Qdra',
+            'key' => 'logo',
+            'value' => '',
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'background_image_index',
+            'value' => '',
         ]);
         DB::table('settings')->insert([
-            'key' => 'background_image_home',
+            'key' => 'background_image_about',
             'value' => '',
         ]);
         DB::table('settings')->insert([
@@ -30,27 +40,7 @@ class SettingSeeder extends Seeder
             'value' => '',
         ]);
         DB::table('settings')->insert([
-            'key' => 'logo',
-            'value' => '',
-        ]);
-        DB::table('settings')->insert([
-            'key' => 'whatsapp',
-            'value' => '',
-        ]);
-        DB::table('settings')->insert([
-            'key' => 'facebook',
-            'value' => '',
-        ]);
-        DB::table('settings')->insert([
-            'key' => 'instagram',
-            'value' => '',
-        ]);
-        DB::table('settings')->insert([
-            'key' => 'twitter',
-            'value' => '',
-        ]);
-        DB::table('settings')->insert([
-            'key' => 'phone',
+            'key' => 'background_image_team',
             'value' => '',
         ]);
 

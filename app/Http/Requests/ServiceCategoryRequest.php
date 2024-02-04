@@ -22,8 +22,8 @@ class ServiceCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "title" => "string|max:255",
-            "desc" => "string",
+            "title" => "required|string|max:255",
+            "desc" => "required|string",
             "service_id"=>"required|exists:services,id"
         ];
     }

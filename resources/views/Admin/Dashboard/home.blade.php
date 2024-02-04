@@ -17,6 +17,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
+    <style>
+        .required::after {
+          content: ' *';
+          color: red; 
+        }
+      </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -31,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="{{ url("dashboard") }}" class="nav-link" >Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="{{ url('/contacts') }}" class="nav-link">Contact</a>
@@ -40,12 +46,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <form action="{{ url('logout') }}" method="POST">
                         @csrf
-                        <input type="submit" value="Logout">
+                        <input type="submit" value="Logout" class="nav-link" >
                     </form>
                 </li>
             </ul>
 
-       
+
         </nav>
         <!-- /.navbar -->
 
@@ -145,10 +151,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('/setting/edit') }}" class="nav-link">
+                        <a href="{{ route("settings.edit")}}" class="nav-link">
 
 
                             Settings
+
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("socials.index")}}" class="nav-link">
+
+
+                            Socials
 
 
                         </a>

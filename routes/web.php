@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -168,10 +169,29 @@ Route::controller(TeamController::class)->group(function(){
 });
 });
 
-Route::prefix('setting')->group(function () {
-    Route::middleware('auth')->group(function () {
 
-    Route::get('edit', [SettingController::class, 'edit'])->name('setting.edit');
-    Route::put('update', [SettingController::class, 'update'])->name('setting.update');
+Route::middleware("auth")->group(function(){
+    Route::get("social",function(){
+        return view("Admin.Dashboard.social");
+        });
+});
+
+Route::middleware("auth")->group(function(){
+Route::controller(SettingController::class)->group(function(){
+    Route::get('settings/edit','edit')->name('settings.edit');
+    Route::put('settings','update')->name('settings.update');
+});
+
+Route::middleware("auth")->group(function(){
+
+
+Route::get('/socials', [SocialController::class, 'index'])->name('socials.index');
+Route::get('/socials/create', [SocialController::class, 'create']);
+Route::post('/socials', [SocialController::class, 'store'])->name('socials.store');
+Route::delete('/socials/{id}', [SocialController::class, 'destroy'])->name('socials.destroy');
+
+
 });
 });
+
+

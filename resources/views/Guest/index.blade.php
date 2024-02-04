@@ -27,41 +27,17 @@
     <!-- Start Side Links Section -->
     <section class="side_links_section">
       <ul class="links_wrapper__">
+        @foreach ( $socials as $social )
+
+
         <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/call.svg")}}" alt="" />
+
+          <a href="{{ $social->link }}" class="link__">
+            <img src="{{ asset("storage/". $social->img)}}" alt="" />
           </a>
         </li>
-        <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/what's_up.svg")}}" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/snap_chat.svg")}}" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" class="link__">
-            <img src="{{ asset("guest/images/socials/facebook.svg")}}" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/instagram.svg")}}" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/twitter_old.svg")}}" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link__">
-            <img src="{{ asset("guest/images/socials/tiktok.svg")}}" alt="" />
-          </a>
-        </li>
+        @endforeach
+
       </ul>
       <div class="arrow_button__">
         <i class="fa-solid fa-chevron-left"></i>
@@ -96,7 +72,8 @@
           <div class="header_content__">
             <a class="header_logo__" href="index.html">
               <figure class="figure__">
-                <img src="{{ asset("guest/images/logo.png")}}" alt=".." />
+                <img src="{{ asset("storage/".$settings[0]->value)}}" alt=".." />
+                {{--@dd($settings[2]->value)--}}
               </figure>
             </a>
 
@@ -179,7 +156,7 @@
             <figure class="figure__ loading-omd asp-om">
               <img
                 class="img-om lazy-omd"
-                data-src="{{ asset("guest/images/intro/01.jpg")}}"
+                data-src="{{ asset("storage/" . $settings[1]->value)}}"
                 alt="..."
               />
             </figure>
@@ -200,7 +177,7 @@
             <figure class="figure__ loading-omd asp-om">
               <img
                 class="img-om lazy-omd"
-                data-src="{{ asset("guest/images/intro/01.jpg")}}"
+                data-src="{{ asset("storage/" . $settings[1]->value)}}"
                 alt="..."
               />
             </figure>
@@ -221,7 +198,7 @@
             <figure class="figure__ loading-omd asp-om">
               <img
                 class="img-om lazy-omd"
-                data-src="{{ asset("guest/images/intro/02.jpg")}}"
+                data-src="{{ asset("storage/" . $settings[2]->value)}}"
                 alt="..."
               />
             </figure>
@@ -242,7 +219,7 @@
             <figure class="figure__ loading-omd asp-om">
               <img
                 class="img-om lazy-omd"
-                data-src="{{ asset("guest/images/intro/03.jpg")}}"
+                data-src="{{ asset("storage/" . $settings[3]->value)}}"
                 alt="..."
               />
             </figure>

@@ -1,7 +1,7 @@
 @extends('Admin.Dashboard.home')
 
 @section('content')
-    @include('errors')
+    {{--@include('errors')--}}
 
     <div class="card-header">
         <h3 class="card-title">Edit Services</h3>
@@ -15,9 +15,12 @@
                 <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
-                        <label>Title</label>
+                        <label class="required">Title</label>
                         <input type="text" name="title" class="form-control" placeholder="Enter ..."
                             value="{{ $service->title }}">
+                            @error('title')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
 
@@ -27,17 +30,25 @@
                 <div class="col-sm-6">
                     <!-- textarea -->
                     <div class="form-group">
-                        <label>Short Description</label>
+                        <label class="required">Short Description</label>
                         <textarea class="form-control" name="shortdesc" rows="3" placeholder="Enter ...">{{ $service->shortdesc }}</textarea>
+
+                        @error('shortdesc')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     </div>
                 </div>
+            </div>
 
                 <div class="row">
                     <div class="col-sm-6">
                         <!-- textarea -->
                         <div class="form-group">
-                            <label>Description</label>
+                            <label class="required">Description</label>
                             <textarea class="form-control" name="desc" rows="3" placeholder="Enter ...">{{ $service->desc }}</textarea>
+                            @error('desc')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                         </div>
                     </div>
 
@@ -49,7 +60,7 @@
                             <input type="file" name="background_image" class=" form-control-file" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Enter image">
                             <label for="exampleInputEmail1">old background image</label>
-                            <img src="{{ asset('storage/' . $service->image) }}" width="40" alt=""
+                            <img src="{{ asset('storage/' . $service->background_image) }}" width="40" alt=""
                                 srcset="">
                         </div>
                         <div class="row">
@@ -94,7 +105,6 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    </div>
-    <!-- /.card-body -->
-    </div>
+
+
 @endsection

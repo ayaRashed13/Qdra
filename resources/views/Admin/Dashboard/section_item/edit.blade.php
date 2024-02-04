@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="card-header">
-      <h3 class="card-title">Create New categories</h3>
+      <h3 class="card-title">Edit item</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -14,8 +14,11 @@
           <div class="col-sm-6">
             <!-- text input -->
             <div class="form-group">
-              <label>Title</label>
+              <label class="required">Title</label>
               <input type="text"name="title" class="form-control" placeholder="Enter ..." value="{{ $key1->title }}">
+              @error('title')
+              <span class="text-danger">{{ $message }}</span>
+          @enderror
             </div>
           </div>
         </div>
@@ -27,6 +30,9 @@
             <div class="form-group">
               <label>Description</label>
               <textarea class="form-control"  name="desc" rows="3" placeholder="Enter ...">{{ $key1->desc }}</textarea>
+              @error('desc')
+              <span class="text-danger">{{ $message }}</span>
+          @enderror
             </div>
           </div>
         </div>
@@ -35,7 +41,7 @@
         <div class="row">
             <div class="col-sm-6">
         <div class="form-group">
-            <label for="exampleInputEmail1">Service Name</label>
+            <label for="exampleInputEmail1" class="required">Service Name</label>
     <select name="service_section_id" id="">
 
         @foreach ($key2 as $service )
@@ -44,11 +50,14 @@
         @endforeach
 
         </select>
+        @error('service_id')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
         </div>
     </div>
 </div>
 
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </form>
     </div>
     <!-- /.card-body -->

@@ -22,16 +22,12 @@ class SettingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'nullable|string',
+
             'background_image_home' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'background_image_service' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'background_image_contact' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'whatsapp' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'facebook' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'instagram' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'twitter' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'phone' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+           
         ];
     }
 }

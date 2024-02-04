@@ -5,7 +5,7 @@
   <!-- TABLE: LATEST ORDERS -->
   <div class="card">
     <div class="card-header border-transparent">
-      <h3 class="card-title">Services</h3>
+      <h3 class="card-title">Categories</h3>
       @include("success")
 
       <div class="card-tools">
@@ -66,8 +66,8 @@
     <!-- /.card-body -->
     <div class="card-footer clearfix">
 
-      <a href="{{ url('/category/create') }}" class="btn btn-sm btn-info float-left">Create New Service</a>
-      <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Contacts</a>
+      <a href="{{ url('/category/create') }}" class="btn btn-sm btn-info float-left">Create New Category</a>
+
     </div>
     <!-- /.card-footer -->
   </div>

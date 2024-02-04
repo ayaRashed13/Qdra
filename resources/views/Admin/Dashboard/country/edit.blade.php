@@ -14,20 +14,18 @@
           <div class="col-sm-6">
             <!-- text input -->
             <div class="form-group">
-              <label>Name</label>
+              <label class="required">Name</label>
               <input type="text"name="name" class="form-control" placeholder="Enter ..." value="{{ $countryEdit->name }}">
-            </div>
+
+              @error('name')
+              <span class="text-danger">{{ $message }}</span>
+          @enderror
+        </div>
           </div>
         </div>
 
-
-
-
-
-
-</div>
-
-        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
       </form>
     </div>
     <!-- /.card-body -->

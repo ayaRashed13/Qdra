@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SectionItemRequest extends FormRequest
+class SocialRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,9 @@ class SectionItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "title" => "required|string|max:255",
-            "desc" => "nullable|string",
-            "service_section_id"=>"required|exists:service_sections,id"
+            "name"=>"string|required",
+            "img"=>"required|image|mimes:png,jpg,jpeg,svg",
+            "link"=>"requird|url|max:255"
         ];
     }
 }

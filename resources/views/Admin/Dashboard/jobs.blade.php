@@ -63,8 +63,8 @@
     <!-- /.card-body -->
     <div class="card-footer clearfix">
 
-      <a href="{{ url('/job/create') }}" class="btn btn-sm btn-info float-left">Create New Service</a>
-      <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Contacts</a>
+      <a href="{{ url('/job/create') }}" class="btn btn-sm btn-info float-left">Create New Job</a>
+
     </div>
     <!-- /.card-footer -->
   </div>
